@@ -1,0 +1,39 @@
+name: retro_welcome_screen
+description: 'Retro Welcome Screen'
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  vector_graphics: ^1.1.11+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  vector_graphics_compiler: ^1.1.11+1
+  very_good_analysis: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/1.png
+    - assets/images/2.png
+    - assets/images/3.png
+    - assets/images/4.png
+
+    - path: assets/images/logo.svg
+      transformers:
+        - package: vector_graphics_compiler
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
